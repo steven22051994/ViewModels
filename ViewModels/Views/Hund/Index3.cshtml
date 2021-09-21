@@ -1,0 +1,69 @@
+﻿@model IEnumerable<ViewModels.ViewModel.HundUndFellViewModel>
+
+@{
+    ViewBag.Title = "Index3";
+}
+
+<h2>Index3</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Hundreferenz.Id)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Hundreferenz.Name)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Hundreferenz.Beine)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Hundreferenz.Age)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Fellreferenz.Id)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Fellreferenz.Farbe)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.TimeStamp)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.Hundreferenz.Id)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Hundreferenz.Name)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Hundreferenz.Beine)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Hundreferenz.Age)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Fellreferenz.Id)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Fellreferenz.Farbe)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.TimeStamp)
+        </td>
+        <td>
+            @*@Html.ActionLink("Edit", "Edit", new { /* id=item.PrimaryKey */ }) |
+            @Html.ActionLink("Details", "Details", new { /* id=item.PrimaryKey */ }) |
+            @Html.ActionLink("Delete", "Delete", new { /* id=item.PrimaryKey */ })*@
+        </td>
+    </tr>
+}
+
+</table>
